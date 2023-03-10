@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "item": "Pizza",
+      "cheacked": true
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "item": "Cookies",
+      "cheacked": false
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "item": "Dry leaf"
+    },
+    {
+      "id": 4,
+      "cheacked": false,
+      "item": "Dog"
+    },
+    {
+      "id": 7,
+      "cheacked": false,
+      "item": "Muguwan"
+    }
+  ]
+}

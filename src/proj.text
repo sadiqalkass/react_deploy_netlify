@@ -1,0 +1,61 @@
+
+const [peopleState , setPeopleState] = useState({
+    people :[
+      {name: "Sadiq", age: 18},
+      {name: "Isa", age: 21},
+      {name: "Emma", age: 19}
+    ],
+});
+
+const [otherState, setOtherState] = useState("My name is mouse");
+
+//console.log(peopleState, otherState);
+const changeNameHandler = (newName) => {
+  setPeopleState({
+    people :[
+      {name: newName, age: 19},
+      {name: "Isa", age: 21},
+      {name: "Benji", age: 20}
+    ]
+  })
+};
+
+const nameChangeHandler = (event) => {
+  setPeopleState({
+    people :[
+      {name: "Sadiq", age: 18},
+      {name: event.target.value, age: 21},
+      {name: "Benji", age: 20}
+    ]
+  })
+}
+
+const style = {
+  backgroundColor : "gray",
+  border: "1px solid #333",
+  padding : "7px",
+  font : "inherit",
+  cursor : "pointer"
+};
+
+return (
+  <div className="App">
+    <h1>Hey there, I'm using React boy</h1>
+    <p>Rex in the house!!</p>
+    <button style={style}
+     onClick={changeNameHandler.bind(this, "Abubakar")}>Change Name</button>
+    <Person name={peopleState.people[0].name}  
+    age={peopleState.people[0].age} />
+    <Person name={peopleState.people[1].name} 
+    age={peopleState.people[1].age} click={() => changeNameHandler("Abu!")}
+     changed={nameChangeHandler}>My Hobbis : Talking</Person>
+    <Person name={peopleState.people[2].name} 
+    age={peopleState.people[2].age}/>
+  </div>
+);
+
+// return React.createElement("div", {className: "App"}, React.createElement("h1", null, "Hey there, I'm using React"))
+};
+}
+
+
